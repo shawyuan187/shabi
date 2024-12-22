@@ -17,9 +17,9 @@ for message in demo_messages:
         st.write(message["content"])
 
 
-if message := st.chat_input("inter chat"):
+if message := st.chat_input("Enter chat"):
     with st.chat_message("user"):
         st.write(message)
 
-with st.chat_message("assistant"):
-    st.write(f"這是示範回復:我收到你的訊息{message}")
+    with st.chat_message("assistant"):
+        st.write(f"這是示範回復:我收到你的訊息->{message}")
