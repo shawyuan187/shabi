@@ -1,6 +1,8 @@
 import streamlit as st
 import os
+from utils import init_page
 
+init_page()
 col1, col2 = st.columns([1, 2])
 with col1:
     if st.button("按鈕1", key="btn8"):

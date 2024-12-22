@@ -1,6 +1,8 @@
 import streamlit as st
 import os
+from utils import init_page
 
+init_page()
 col_option, col_image = st.columns([1, 2])
 
 with col_option:
