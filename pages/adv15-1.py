@@ -2,9 +2,10 @@ import streamlit as st
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
-from utils import init_page
+from utils import init_page, set_title
 
 init_page()
+set_title("搜尋問答 AI")
 # Load environment variables
 load_dotenv()
 
@@ -12,7 +13,6 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Initialize Streamlit page
-st.title("搜尋問答 AI")
 
 # Input from user
 if message := st.chat_input("請輸入您想前往的頁面"):

@@ -1,8 +1,9 @@
 import streamlit as st
 import os
-from utils import init_page
+from utils import init_page, set_title
 
 init_page()
+set_title("圖片設定")
 col_option, col_image = st.columns([1, 2])
 
 with col_option:

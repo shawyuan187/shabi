@@ -1,8 +1,8 @@
 import streamlit as st
-from utils import init_page
+from utils import init_page, set_title
 
 init_page()
-st.title("案一下以新增標題")
+set_title("案一下以新增標題")
 st.write("寫東西")
 st.text("only word")
 st.markdown(

@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
-from utils import init_page
+from utils import init_page, set_title
 
 init_page()
 # Load environment variables
@@ -11,8 +11,7 @@ load_dotenv()
 # Set OpenAI API key
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Initialize Streamlit page
-st.title("聊天室")
+set_title("聊天室")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []

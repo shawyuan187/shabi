@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-from utils import init_page
+from utils import init_page, set_title
 
 init_page()
 col1, col2 = st.columns([1, 2])
@@ -35,7 +35,7 @@ st.write(f"ans={st.session_state.ans}")
 image_folder = "images"
 image_files = os.listdir(image_folder)
 st.write(image_files)
-st.title("圖片")
+set_title("圖片")
 st.image("images/apple.png", width=300)
 fruit = st.selectbox(
     "選擇水果",

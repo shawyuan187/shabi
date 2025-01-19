@@ -1,8 +1,8 @@
 import streamlit as st
-from utils import init_page
+from utils import init_page, set_title
 
 init_page()
-st.title("聊天室")
+set_title("聊天室")
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
